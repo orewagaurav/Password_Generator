@@ -129,3 +129,70 @@ The project uses Tailwind CSS for styling. You can modify the styles by:
 1. Editing the Tailwind classes directly in the JSX
 2. Creating custom styles in `App.css`
 3. Configuring Tailwind in a `tailwind.config.js` file (if you need to extend the default configuration)
+
+## Deployment to GitHub Pages (Vite + React)
+
+To deploy this project using GitHub Pages:
+
+### 1. Install `gh-pages`
+Install the GitHub Pages deployment package:
+```bash
+npm install gh-pages --save-dev
+```
+
+### 2. Add `homepage` in `package.json`
+Specify the GitHub Pages URL:
+```json
+"homepage": "https://orewagaurav.github.io/Password_Generator"
+```
+
+### 3. Add deploy scripts in `package.json`
+Inside the `"scripts"` section:
+```json
+"predeploy": "npm run build",
+"deploy": "gh-pages -d dist"
+```
+
+### 4. Update Vite config
+In `vite.config.js`, add:
+```js
+base: "/Password_Generator/",
+```
+
+### 5. Commit changes
+Make sure all files are committed:
+```bash
+git add .
+git commit -m "Prepare for GitHub Pages deployment"
+git push origin main
+```
+
+### 6. Deploy to GitHub Pages
+Run the deploy command:
+```bash
+npm run deploy
+```
+
+This builds the app and pushes the `dist/` folder to a new `gh-pages` branch.
+
+### 7. Configure GitHub Pages in the repository
+- Go to your repository on GitHub
+- Click on **Settings > Pages**
+- Under **Source**, choose:
+  - Branch: `gh-pages`
+  - Folder: `/ (root)`
+- Click **Save**
+
+### 8. Visit your deployed site
+After a minute or two, your site will be live at:
+```
+https://orewagaurav.github.io/Password_Generator/
+```
+
+### 9. (Optional) Stop tracking `dist/` folder
+Make sure `dist/` is listed in `.gitignore`, and remove it from Git tracking:
+```bash
+git rm -r --cached dist/
+git commit -m "Stop tracking dist folder"
+git push
+```
