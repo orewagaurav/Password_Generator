@@ -1,5 +1,7 @@
 # Password Generator
 
+## 🔗 [Live Demo](https://orewagaurav.github.io/Password_Generator/)
+
 A modern React application that generates secure passwords with customizable options. Built with React and styled with Tailwind CSS.
 
 ![Password Generator Screenshot](./src/assets/image.png)
