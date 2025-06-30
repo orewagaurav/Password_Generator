@@ -28,8 +28,8 @@ Follow these steps to set up the project locally:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/orewagaurav/passwordgenerator.git
-cd passwordgenerator
+git clone https://github.com/orewagaurav/Password_Generator.git
+cd Password_Generator
 ```
 
 2. Install dependencies:
@@ -37,8 +37,6 @@ cd passwordgenerator
 ```bash
 npm install
 ```
-
-## Usage
 
 ### Development Server
 
@@ -78,7 +76,7 @@ npm run preview
 ## Project Structure
 
 ```
-passwordgenerator/
+Password_Generator/
 ├── public/            # Static assets
 ├── src/
 │   ├── App.jsx        # Main application component
